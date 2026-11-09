@@ -1,10 +1,53 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- zoedr.com landing page (docs/dns.md). Lives in 703-assistant/harness/site/; she copies it as index.html into the
+     site repo zoedorable/703-assistant-site, which the box pulls into /var/www/zoedr. privacy.html and terms.html
+     there stay as they are. Same terminal look as the zoedr.de card; one file, zero JavaScript, no external request. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>703-assistant</title>
-<style>body{font:16px/1.5 system-ui,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1rem;color:#222}a{color:#06c}</style></head>
+<meta name="description" content="703-assistant: a single-user personal assistant, not a product.">
+<style>
+:root{--bg:#efece4;--card:#fbfaf6;--fg:#1f2321;--muted:#5f6661;--line:#dcd7cc;--accent:#2e5e4e;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#121a16;--fg:#d7e0d2;--muted:#7d8a78;--line:#232b24;
+  --accent:#8bd450}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--fg);
+  font:400 .9375rem/1.6 var(--mono);padding:24px 16px;overflow-wrap:break-word}
+main{width:100%;max-width:38rem;background:var(--card);border:1px solid var(--line);border-radius:6px;
+  padding:clamp(18px,4vw,32px)}
+h1,p,ul{margin:0}
+.prompt{color:var(--muted)}
+.host{color:var(--accent)}
+h1{font:700 1.4rem/1.3 var(--mono);margin-top:.6rem}
+.what{margin-top:.2rem}
+ul{list-style:none;padding:0;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line);display:flex;
+  flex-wrap:wrap;gap:.3rem 1.5rem}
+a{color:var(--accent);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.cursor{margin-top:1rem;color:var(--muted)}
+.cursor::after{content:"";display:inline-block;width:.55em;height:1.05em;margin-left:.4em;background:var(--accent);
+  vertical-align:-.17em;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cursor::after{animation:none}}
+</style>
+</head>
 <body>
+<main>
+<p class="prompt"><span class="host">zoedr.com</span>:~$ cat README</p>
 <h1>703-assistant</h1>
-<p>A personal, single-user assistant that keeps one person's journal, reminders and calendar in sync. It runs on its owner's own computer and connects to that owner's Google Calendar only.</p>
-<p>It is not a product and has no other users. Source: <a href="https://github.com/zoedorable/703-assistant">github.com/zoedorable/703-assistant</a> (private).</p>
-<p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
-</body></html>
+<p class="what">a single-user personal assistant, not a product. It keeps one person's journal, reminders and calendar in sync and connects only to that owner's Google Calendar.</p>
+<ul>
+<li><a href="privacy.html">privacy.html</a></li>
+<li><a href="terms.html">terms.html</a></li>
+<li><a href="https://zoedr.de">zoedr.de</a></li>
+</ul>
+<p class="cursor" aria-hidden="true"><span class="host">~</span>$</p>
+</main>
+</body>
+</html>
