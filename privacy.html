@@ -1,15 +1,31 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>703-assistant privacy policy</title>
-<style>body{font:16px/1.5 system-ui,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1rem;color:#222}a{color:#06c}</style></head>
+<style>body{font:16px/1.5 system-ui,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1rem;color:#222}a{color:#06c}h2{font-size:1.1rem;margin-top:2rem}</style></head>
 <body>
 <h1>Privacy policy</h1>
-<p>703-assistant is a personal tool used by its single owner on their own computer.</p>
+<p>703-assistant is a personal tool used by its single owner, on infrastructure the owner operates. It has no other users, no customers and no commercial purpose. Last updated: 9 November 2026.</p>
+
+<h2>What it processes</h2>
 <ul>
-<li>It accesses the owner's Google Calendar (scope: calendar) to read and create events on the owner's behalf.</li>
-<li>Google user data is stored only on the owner's computer, in the owner's own files, and is never transmitted to any third party, sold, or used for advertising.</li>
-<li>No analytics, no tracking, no server. The OAuth token can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-<li>Use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+<li><strong>Google Calendar</strong> (scope: calendar): reads and creates events on the owner's behalf. Use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The token can be revoked at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li><strong>Bank account information</strong> (via Enable Banking, a licensed account information service provider): with the owner's explicit consent given to the owner's own bank, the tool reads account balances and transactions of the owner's own accounts into a self-hosted budgeting application (Actual Budget) running on the owner's server. The consent lasts at most 90 days and can be withdrawn at the bank or at Enable Banking at any time. No payments are initiated. Only accounts that belong to the owner are ever connected.</li>
+<li><strong>Other personal data of the owner</strong> (notes, reminders, email metadata of the owner's own mailbox, listening activity): processed only for the owner's own use.</li>
 </ul>
-<p>Contact: the repository owner via GitHub, <a href="https://github.com/zoedorable">github.com/zoedorable</a>.</p>
+
+<h2>Where data is stored</h2>
+<p>On the owner's own devices and on a single virtual server rented by the owner in Germany, reachable only through a private network. Backups are encrypted with a key that only the owner holds.</p>
+
+<h2>What never happens</h2>
+<ul>
+<li>No data is sold, shared with third parties, or used for advertising or profiling.</li>
+<li>No analytics, no tracking, no cookies on this website.</li>
+<li>No access to anyone else's accounts or data.</li>
+</ul>
+
+<h2>Third parties involved</h2>
+<p>Google (calendar), Enable Banking Oy (bank account information, acting as the regulated service provider between the bank and the owner), Anthropic (an AI model processes short pieces of the owner's own text for structuring; no bank data is sent there), Microsoft (the owner's own mailbox), Spotify (the owner's own playback). Each only under the owner's own account and consent with that provider.</p>
+
+<h2>Your rights and contact</h2>
+<p>Since the only data subject is the owner, requests under the GDPR concern the owner alone. Questions: <a href="mailto:703@zoedr.com">703@zoedr.com</a> or via GitHub, <a href="https://github.com/zoedorable">github.com/zoedorable</a>. Terms of use: <a href="terms.html">terms.html</a>.</p>
 </body></html>
